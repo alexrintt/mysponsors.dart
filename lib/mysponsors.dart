@@ -93,7 +93,7 @@ class SponsorEntity {
   const SponsorEntity({
     required this.avatarUrl,
     required this.url,
-    required this.name,
+    this.name,
     required this.login,
   });
 
