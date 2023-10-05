@@ -87,7 +87,7 @@ class SponsorInfo {
 class SponsorEntity {
   final String avatarUrl;
   final String url;
-  final String name;
+  final String? name;
   final String login;
 
   const SponsorEntity({
