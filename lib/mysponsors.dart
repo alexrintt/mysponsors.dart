@@ -53,12 +53,14 @@ class SponsorInfo {
   final DateTime createdAt;
   final bool isActive;
   final SponsorEntity sponsorEntity;
+  final String? websiteUrl;
 
   const SponsorInfo({
     required this.privacyLevel,
     required this.createdAt,
     required this.isActive,
     required this.sponsorEntity,
+    this.websiteUrl,
   });
 
   factory SponsorInfo.fromJson(Map<String, dynamic> json) {
@@ -67,6 +69,7 @@ class SponsorInfo {
       createdAt: DateTime.parse(json['createdAt']),
       isActive: json['isActive'],
       sponsorEntity: SponsorEntity.fromJson(json['sponsorEntity']),
+      websiteUrl: json['websiteUrl'],
     );
   }
 
@@ -76,6 +79,7 @@ class SponsorInfo {
       'createdAt': createdAt.toIso8601String(),
       'isActive': isActive,
       'sponsorEntity': sponsorEntity.toJson(),
+      'websiteUrl': websiteUrl,
     };
   }
 }
